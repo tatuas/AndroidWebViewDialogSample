@@ -1,5 +1,5 @@
 # AndroidWebViewDialogSample
 Android WebViewDialog Sample
 
-# Try DeployGate
+# Try
 https://dply.me/3a3e0p
