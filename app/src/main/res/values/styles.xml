@@ -11,6 +11,10 @@
     <style name="WebViewDialogActivityTheme" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowNoTitle">true</item>
+        <item name="windowFixedWidthMajor">@dimen/dialog_width_landscape</item>
+        <item name="windowFixedWidthMinor">@dimen/dialog_width_portrait</item>
+        <item name="windowFixedHeightMajor">@dimen/dialog_height_portrait</item>
+        <item name="windowFixedHeightMinor">@dimen/dialog_height_landscape</item>
     </style>
 
 </resources>

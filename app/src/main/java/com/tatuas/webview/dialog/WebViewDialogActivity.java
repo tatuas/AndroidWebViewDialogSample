@@ -43,12 +43,18 @@ public class WebViewDialogActivity extends AppCompatActivity {
         });
         final WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(getIntent().getBooleanExtra(EXTRA_JAVASCRIPT, false));
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
 
         webView.loadUrl(getIntent().getStringExtra(EXTRA_URL));
     }
 
     @Override
     public void finish() {
+        // ダイアログのシャドウ部分がタップされると、
+        // 通常はこのfinishが呼ばれます。
+        // タップされてもダイアログを閉じないようにするには、
+        // このメソッドをオーバーライドしてsuperを呼ばないようにすればよいです。
         Toast.makeText(WebViewDialogActivity.this, "Disable Finish", Toast.LENGTH_SHORT).show();
     }
 
